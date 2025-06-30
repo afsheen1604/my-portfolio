@@ -33,9 +33,9 @@ body {
     line-height: 1.6;
 }
 
-/* Fixed section styling - removed min-height and adjusted padding */
+/* Section styling */
 section {
-    padding: 5rem 9% 3rem;
+    padding: 10rem 9% 2rem;
 }
 
 /* Only home section gets special treatment for viewport height */
@@ -47,9 +47,10 @@ section {
     padding-top: 7rem;
 }
 
-/* Remove min-height from other sections to prevent empty space */
-#about, #skills, #experience, #projects, #contact {
+/* Other sections with proper spacing */
+#about, #skills, #experience, #projects, #additional-projects, #contact {
     min-height: auto;
+    padding: 5rem 9% 3rem;
 }
 
 /* Contact section with reduced padding */
@@ -258,7 +259,7 @@ header {
 .section-heading {
     text-align: center;
     font-size: 4.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 .section-heading span {
@@ -310,7 +311,7 @@ header {
 
 /* Skills Section */
 .skills-content {
-    padding: 0;
+    padding: 2rem 0;
 }
 
 .skills-card {
@@ -360,8 +361,17 @@ header {
     font-size: 1.6rem;
 }
 
+/* Experience Section */
+#experience {
+    background: var(--secondary-color);
+}
+
 /* Projects Section */
 #projects {
+    background: var(--background-color);
+}
+
+#additional-projects {
     background: var(--secondary-color);
 }
 
@@ -413,6 +423,7 @@ header {
 .project-links {
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
 }
 
 .btn-small {
@@ -423,6 +434,8 @@ header {
     color: var(--secondary-color);
     font-weight: 600;
     transition: all 0.3s ease;
+    flex: 1;
+    text-align: center;
 }
 
 .btn-small:hover {
@@ -430,23 +443,13 @@ header {
     transform: scale(1.05);
 }
 
-/* Contact Section - Optimized to minimize empty space */
-.contact-content {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 4rem;
-    max-width: 120rem;
-    margin: 0 auto;
-}
-
+/* Contact Section */
 .contact-info {
-    flex: 1;
-    min-width: 30rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
 }
 
 .contact-card {
@@ -455,10 +458,11 @@ header {
     margin-bottom: 2rem;
     width: 100%;
     max-width: 40rem;
+    justify-content: center;
 }
 
-.contact-card:last-child {
-    margin-bottom: 1rem;
+.contact-card:last-of-type {
+    margin-bottom: 2.5rem;
 }
 
 .contact-card i {
@@ -503,70 +507,7 @@ header {
     box-shadow: 0 0 1rem var(--primary-color);
 }
 
-.contact-form {
-    flex: 1;
-    min-width: 30rem;
-}
-
-.contact-form .field {
-    width: 100%;
-    margin-bottom: 1.5rem;
-}
-
-.contact-form .fields {
-    display: flex;
-    justify-content: space-between;
-}
-
-.contact-form .fields .field {
-    width: 48%;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 1.5rem;
-    font-size: 1.6rem;
-    border-radius: 0.5rem;
-    background: var(--secondary-color);
-    color: var(--text-color);
-    border: 0.1rem solid transparent;
-    transition: all 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 1rem var(--shadow-color);
-}
-
-.contact-form textarea {
-    resize: none;
-    height: 15rem;
-}
-
-.contact-form .button-area {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.contact-form .button-area button {
-    padding: 1.2rem 2.8rem;
-    background: var(--primary-color);
-    border-radius: 4rem;
-    font-size: 1.6rem;
-    color: var(--secondary-color);
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.contact-form .button-area button:hover {
-    box-shadow: 0 0 1rem var(--shadow-color);
-    transform: scale(1.05);
-}
-
-/* Footer - Reduced margin */
+/* Footer */
 footer {
     background: var(--secondary-color);
     padding: 2rem 9%;
@@ -593,13 +534,13 @@ footer span a {
     }
     
     section {
-        padding: 3rem 3% 2rem;
+        padding: 5rem 3% 2rem;
     }
     
     #contact {
-        padding: 2rem 3% 1.5rem;
+        padding: 3rem 3% 2rem;
     }
-    
+
     .home-content {
         flex-direction: column;
         text-align: center;
@@ -633,13 +574,13 @@ footer span a {
     }
     
     section {
-        padding: 2rem 3% 1.5rem;
+        padding: 3rem 3% 2rem;
     }
     
     #contact {
         padding: 2rem 3% 1rem;
     }
-    
+
     .menu-toggle {
         display: block;
     }
@@ -674,23 +615,14 @@ footer span a {
         font-size: 2.5rem;
     }
     
-    .contact-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
-    
     .contact-card {
         justify-content: center;
         text-align: center;
     }
     
-    .contact-form .fields {
+    .project-links {
         flex-direction: column;
-    }
-    
-    .contact-form .fields .field {
-        width: 100%;
+        gap: 1rem;
     }
 }
 
@@ -706,7 +638,7 @@ footer span a {
     #contact {
         padding: 1.5rem 3% 0.5rem;
     }
-    
+
     .text-container h1 {
         font-size: 4.5rem;
     }
@@ -719,5 +651,14 @@ footer span a {
         margin-right: 0;
         margin-bottom: 1.5rem;
         width: 100%;
+    }
+    
+    .project-links {
+        flex-direction: column;
+    }
+    
+    .btn-small {
+        width: 100%;
+        margin-bottom: 0.5rem;
     }
 }

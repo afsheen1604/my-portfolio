@@ -43,14 +43,14 @@ window.addEventListener('scroll', () => {
 
 /*==================== TYPING ANIMATION ====================*/
 const typed = new Typed('.typing', {
-    strings: ['Software Developer', 'Data Analyst'],
+    strings: ['Software Developer', 'Data Analyst', 'ML Enthusiast'],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
 });
 
 const typed2 = new Typed('.typing-2', {
-    strings: ['Software Developer', 'Data Analyst'],
+    strings: ['Software Developer', 'Data Analyst', 'ML Enthusiast'],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
@@ -60,23 +60,35 @@ const typed2 = new Typed('.typing-2', {
 window.addEventListener('load', () => {
     // Animate home content
     setTimeout(() => {
-        document.querySelector('.text-container h5').style.opacity = '1';
-        document.querySelector('.text-container h5').style.transform = 'translateY(0)';
+        const h5Element = document.querySelector('.text-container h5');
+        if (h5Element) {
+            h5Element.style.opacity = '1';
+            h5Element.style.transform = 'translateY(0)';
+        }
     }, 300);
     
     setTimeout(() => {
-        document.querySelector('.text-container h1').style.opacity = '1';
-        document.querySelector('.text-container h1').style.transform = 'translateY(0)';
+        const h1Element = document.querySelector('.text-container h1');
+        if (h1Element) {
+            h1Element.style.opacity = '1';
+            h1Element.style.transform = 'translateY(0)';
+        }
     }, 600);
     
     setTimeout(() => {
-        document.querySelector('.text-container h3').style.opacity = '1';
-        document.querySelector('.text-container h3').style.transform = 'translateY(0)';
+        const h3Element = document.querySelector('.text-container h3');
+        if (h3Element) {
+            h3Element.style.opacity = '1';
+            h3Element.style.transform = 'translateY(0)';
+        }
     }, 900);
     
     setTimeout(() => {
-        document.querySelector('.social-links').style.opacity = '1';
-        document.querySelector('.social-links').style.transform = 'translateY(0)';
+        const socialLinks = document.querySelector('.social-links');
+        if (socialLinks) {
+            socialLinks.style.opacity = '1';
+            socialLinks.style.transform = 'translateY(0)';
+        }
     }, 1200);
     
     setTimeout(() => {
@@ -88,38 +100,13 @@ window.addEventListener('load', () => {
     }, 1500);
     
     setTimeout(() => {
-        document.querySelector('.image-container').style.opacity = '1';
-        document.querySelector('.image-container').style.transform = 'translateX(0)';
+        const imageContainer = document.querySelector('.image-container');
+        if (imageContainer) {
+            imageContainer.style.opacity = '1';
+            imageContainer.style.transform = 'translateX(0)';
+        }
     }, 1800);
 });
-
-/*==================== FORM SUBMISSION ====================*/
-const contactForm = document.querySelector('.contact-form form');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Here you would normally add code to handle form submission
-        // For example, using fetch API to send data to a server
-        
-        // Show success message (demo only)
-        const button = this.querySelector('button');
-        const originalText = button.textContent;
-        
-        button.textContent = 'Message Sent!';
-        button.style.backgroundColor = '#4BB543';
-        
-        // Reset form
-        this.reset();
-        
-        // Reset button text after 3 seconds
-        setTimeout(() => {
-            button.textContent = originalText;
-            button.style.backgroundColor = '';
-        }, 3000);
-    });
-}
 
 /*==================== SCROLL TO TOP BUTTON ====================*/
 // Create the button element
@@ -290,3 +277,24 @@ animationStyle.textContent = `
     }
 `;
 document.head.appendChild(animationStyle);
+
+/*==================== SMOOTH SCROLLING FOR NAV LINKS ====================*/
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+/*==================== PREVENT DEFAULT FOR DISABLED LINKS ====================*/
+document.querySelectorAll('a[href="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+    });
+});
