@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+  --color-bg: #0a0e1a;
+  --color-bg-soft: #0f1424;
+  --color-neon-blue: #00d4ff;
+  --color-neon-violet: #a855f7;
+  --color-neon-pink: #ec4899;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: var(--font-sans);
+}

@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col items-center justify-center gap-6 px-6"
+      className="flex flex-col items-center justify-center gap-6 px-6 py-20"
     >
       <img
         src={profilePic}
