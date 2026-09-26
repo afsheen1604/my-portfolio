@@ -19,6 +19,7 @@ export const projects: ProjectItem[] = [
       "Full-stack AI resume platform with REST APIs, JWT authentication, MySQL, real-time editing, and PDF generation. Integrated the Gemini API with structured prompt engineering to generate and refine personalized resume summaries, with end-to-end CRUD workflows across frontend, backend, and database layers.",
     status: "live",
     technologies: ["React", "Strapi CMS", "MySQL", "Gemini API"],
+    repoUrl: "https://github.com/afsheen1604/Ai-Resume-Builder",
   },
   {
     title: "LookGood",
@@ -26,6 +27,7 @@ export const projects: ProjectItem[] = [
       "Full-stack e-commerce application with JWT authentication, REST APIs, MongoDB persistence, cart management, promo codes, and PayPal integration. Backend APIs built with Node.js and Express.js for product, authentication, cart, and order workflows. Deployed on Vercel with a Git-based development workflow.",
     status: "live",
     technologies: ["React", "Node.js", "Express.js", "MongoDB"],
+    repoUrl: "https://github.com/afsheen1604/LookGood",
   },
   {
     title: "FusionIIIT — Real-Time ERP Notification System",
@@ -35,15 +37,12 @@ export const projects: ProjectItem[] = [
     technologies: ["Django", "PostgreSQL", "JavaScript", "Semantic UI"],
   },
   {
-    title: "Compylr",
-    description: "", // TODO: [NEEDS INPUT]
-    status: "live", // confirm actual status
-    technologies: [],
-  },
-  {
     title: "Ivory Edge Interiors",
-    description: "", // TODO: [NEEDS INPUT] — not yet detailed
-    status: "live", // confirm actual status
-    technologies: [],
+    description:
+      "Interior design portfolio and client engagement platform for a design studio. Public-facing showcase for projects, services, reviews, and gallery content, plus an authenticated admin panel for managing projects, media, and inquiries. Backed by Supabase for auth, database, and media storage.",
+    status: "live",
+    technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Supabase", "TanStack Query"],
+    liveUrl: "https://ivory-edge-interiors.vercel.app",
+    repoUrl: "https://github.com/afsheen1604/ivory-edge-interiors",
   },
 ]
