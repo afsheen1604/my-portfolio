@@ -13,8 +13,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur border-b border-slate-800">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#home" className="text-white font-semibold text-lg">
-          {/* TODO: [NEEDS INPUT] — your name / logo mark */}
-          YourName
+          Nida Afsheen
         </a>
         <ul className="hidden md:flex gap-8 text-sm text-slate-300">
           {navLinks.map((link) => (
