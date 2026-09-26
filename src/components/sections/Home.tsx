@@ -13,8 +13,7 @@ export default function Home() {
       />
       <div className="text-center">
         <h1 className="text-5xl font-bold text-white mb-4">
-          {/* TODO: [NEEDS INPUT] — your name */}
-          Your Name
+          Shaik Nida Afsheen
         </h1>
         <p className="text-xl text-slate-400">
           Software Engineer — AI & Agentic Systems • Full Stack • Frontend
