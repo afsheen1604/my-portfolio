@@ -18,13 +18,13 @@ export default function Home() {
       className="max-w-5xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center"
     >
       <div>
-        <p className="text-slate-400 text-xl mb-2">Hello, I'm</p>
+        <p className="mb-2 text-xl text-slate-400">Hello, I'm</p>
 
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 flex flex-wrap">
+        <h1 className="mb-4 flex flex-wrap text-4xl font-bold md:text-5xl">
           {NAME.split("").map((char, i) => (
             <span
               key={i}
-              className="inline-block transition-all duration-300 ease-out bg-gradient-to-r from-neon-blue via-neon-violet to-neon-pink bg-clip-text text-transparent"
+              className="inline-block bg-gradient-to-r from-neon-blue via-neon-violet to-neon-pink bg-clip-text text-transparent transition-all duration-300 ease-out"
               style={{
                 opacity: i < visibleCount ? 1 : 0,
                 transform:
@@ -37,7 +37,7 @@ export default function Home() {
           ))}
         </h1>
 
-        <p className="text-lg md:text-xl font-medium tracking-wide mb-8">
+        <p className="mb-8 text-lg font-medium tracking-wide md:text-xl">
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-violet">
             Software Engineer
           </span>

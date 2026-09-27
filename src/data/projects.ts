@@ -2,18 +2,6 @@ import type { ProjectItem } from "../types"
 
 export const projects: ProjectItem[] = [
   {
-    title: "AI Agentic Job Automation Platform",
-    description: "", // TODO: [NEEDS INPUT] — planned, not built yet
-    status: "planned",
-    technologies: [],
-  },
-  {
-    title: "AI Knowledge Workspace",
-    description: "", // TODO: [NEEDS INPUT] — planned, not built yet
-    status: "planned",
-    technologies: [],
-  },
-  {
     title: "Resume Genie",
     description:
       "Full-stack AI resume platform with REST APIs, JWT authentication, MySQL, real-time editing, and PDF generation. Integrated the Gemini API with structured prompt engineering to generate and refine personalized resume summaries, with end-to-end CRUD workflows across frontend, backend, and database layers.",

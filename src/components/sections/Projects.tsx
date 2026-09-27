@@ -29,7 +29,7 @@ export default function Projects() {
               </span>
             </div>
             <p className="text-slate-400 text-sm">
-              {p.description || "TODO: [NEEDS INPUT]"}
+              {p.description || "Project details will be updated soon."}
             </p>
           </div>
         ))}

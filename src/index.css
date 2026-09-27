@@ -3,15 +3,19 @@
 @theme {
   --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
 
-  --color-bg: #0a0e1a;
-  --color-bg-soft: #0f1424;
-  --color-neon-blue: #00d4ff;
-  --color-neon-violet: #a855f7;
-  --color-neon-pink: #ec4899;
+  --color-bg: #070b15;
+  --color-bg-soft: #0d1320;
+  --color-neon-blue: #5ee7ff;
+  --color-neon-violet: #8b5cf6;
+  --color-neon-pink: #f472b6;
 }
 
 :root {
   color-scheme: dark;
+  --brand-glow-blue: rgba(94, 231, 255, 0.28);
+  --brand-glow-violet: rgba(139, 92, 246, 0.22);
+  --brand-glow-pink: rgba(244, 114, 182, 0.18);
+  --grid-line: rgba(148, 163, 184, 0.07);
 }
 
 html {
@@ -20,8 +24,9 @@ html {
 
 body {
   background:
-    radial-gradient(circle at top, rgba(59, 130, 246, 0.14), transparent 32%),
-    radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.12), transparent 30%),
+    radial-gradient(circle at top, var(--brand-glow-blue), transparent 30%),
+    radial-gradient(circle at bottom right, var(--brand-glow-violet), transparent 28%),
+    radial-gradient(circle at bottom left, var(--brand-glow-pink), transparent 24%),
     var(--color-bg);
   font-family: var(--font-sans);
   color: #e2e8f0;
@@ -29,8 +34,8 @@ body {
 
 .background-grid {
   background-image:
-    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: 120px 120px;
   mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
   -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
