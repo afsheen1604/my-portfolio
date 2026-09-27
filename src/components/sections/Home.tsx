@@ -81,7 +81,7 @@ export default function Home() {
           </a>
 
           <a
-            href="/resume.pdf"
+            href="./resume.pdf"
             download="ShaikNidaAfsheen_Resume.pdf"
             className="px-6 py-3 rounded-full border border-neon-blue/50 text-neon-blue font-semibold hover:bg-neon-blue/10 transition-colors"
           >
