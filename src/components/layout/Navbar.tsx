@@ -16,7 +16,7 @@ export default function Navbar() {
           href="#home"
           className="font-semibold text-lg bg-gradient-to-r from-neon-blue to-neon-violet bg-clip-text text-transparent"
         >
-          Nida Afsheen
+          Shaik Nida Afsheen
         </a>
         <ul className="hidden md:flex gap-8 text-sm text-slate-300">
           {navLinks.map((link) => (

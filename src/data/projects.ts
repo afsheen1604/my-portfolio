@@ -32,9 +32,10 @@ export const projects: ProjectItem[] = [
   {
     title: "FusionIIIT — Real-Time ERP Notification System",
     description:
-      "Real-time notification system across 15+ campus modules, serving 2,000+ students, built at IIITDM Jabalpur. Optimized PostgreSQL schemas and queries, reducing query latency by 60% under concurrent load. Built reusable Django backend and REST services for integration across multiple modules.",
+      "Contributed a real-time notification system to FusionIIIT, an existing open-source campus ERP platform at IIITDM Jabalpur, as part of a group project. Worked on optimizing PostgreSQL schemas and queries to reduce query latency under concurrent load, and built reusable Django backend and REST services integrated across multiple existing modules.",
     status: "live",
     technologies: ["Django", "PostgreSQL", "JavaScript", "Semantic UI"],
+    repoUrl: "https://github.com/afsheen1604/FusionIIIT",
   },
   {
     title: "Ivory Edge Interiors",

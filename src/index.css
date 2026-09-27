@@ -10,7 +10,156 @@
   --color-neon-pink: #ec4899;
 }
 
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: var(--color-bg);
+  background:
+    radial-gradient(circle at top, rgba(59, 130, 246, 0.14), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.12), transparent 30%),
+    var(--color-bg);
   font-family: var(--font-sans);
+  color: #e2e8f0;
+}
+
+.background-grid {
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 120px 120px;
+  mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+}
+
+.background-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(100px);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: drift 18s ease-in-out infinite alternate;
+}
+
+.orb-one {
+  width: 32rem;
+  height: 32rem;
+  left: -8rem;
+  top: -10rem;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.55), rgba(34, 211, 238, 0));
+}
+
+.orb-two {
+  width: 28rem;
+  height: 28rem;
+  right: -6rem;
+  top: 8rem;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.5), rgba(168, 85, 247, 0));
+  animation-delay: 2s;
+}
+
+.orb-three {
+  width: 30rem;
+  height: 30rem;
+  left: 25%;
+  bottom: -10rem;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.38), rgba(59, 130, 246, 0));
+  animation-delay: 4s;
+}
+
+.polygon-shape {
+  transform-origin: center;
+  animation: floatPolygon 18s ease-in-out infinite alternate;
+}
+
+.neural-network {
+  transform-origin: center;
+  animation: networkDrift 20s ease-in-out infinite alternate;
+}
+
+.neural-line {
+  stroke-linecap: round;
+  opacity: 0.8;
+  animation: linePulse 4s ease-in-out infinite;
+}
+
+.neural-node {
+  filter: drop-shadow(0 0 6px rgba(103, 232, 249, 0.9));
+  animation: nodePulse 3s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(4%, -3%, 0) scale(1.08);
+  }
+}
+
+@keyframes floatPolygon {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.72;
+  }
+  100% {
+    transform: translate3d(1.5%, -1.8%, 0) scale(1.04);
+    opacity: 1;
+  }
+}
+
+@keyframes networkDrift {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.08) translate3d(1%, 1.5%, 0);
+  }
+}
+
+@keyframes linePulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes nodePulse {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes spinBorder {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
